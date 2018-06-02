@@ -25,13 +25,20 @@ namespace HoloKit
         public bool isRotateToCamera = false;
 
         public GameObject holder;
-
+        public GameObject holder2;
+        public Vector2 direction1 = new Vector2(0.5F, 0.5F);
+        public float speed = 0.6F;
         private void Update()
         {
-            if ((isPlaceOnTouch && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && !HoloKitUITool.IsOverUI(Input.touches[0].position)))
-            {
-                PlaceObject();
-            }
+            if (holder.transform.position[0] < -2 || holder.transform.position[0] > 2) { direction1[0] = -direction1[0]; }
+            if (holder.transform.position[1] < -2 || holder.transform.position[1] > 2) { direction1[1] = -direction1[1]; }
+            holder.transform.position = new Vector3(holder.transform.position[0] + speed * direction1[0], holder.transform.position[1] + speed * direction1[1], holder.transform.position[2]);
+
+            //             if ((isPlaceOnTouch && Input.touchCount > 0 && Input.touches[0].phase == TouchPhase.Began && !HoloKitUITool.IsOverUI(Input.touches[0].position)))
+            //             {
+            //                 PlaceObject();
+            //             }
+
         }
 
         private void PlaceObject()
