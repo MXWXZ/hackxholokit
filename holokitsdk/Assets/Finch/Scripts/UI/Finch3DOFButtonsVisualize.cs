@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Finch
 {
@@ -126,10 +125,6 @@ namespace Finch
                 Material[] arrayCopy = Renderer.materials;
                 arrayCopy[materialIndex] = pressed;
                 Renderer.materials = arrayCopy;
-                if (materialIndex == 0)
-                {
-
-                }
             }
             else if (controller.GetPressUp(element))
             {

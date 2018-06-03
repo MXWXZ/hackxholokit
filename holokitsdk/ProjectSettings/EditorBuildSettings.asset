@@ -11,13 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HoloKitSDK/Scenes/HoloKitSample_Universal.unity
     guid: e1051f39879e3d348ba8a56eff69abdc
-  - enabled: 0
-    path: Assets/Finch/Scenes/SingleDashControllerScene.unity
-    guid: cea2e301d66b42e47974e5b9571fa4e9
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}
